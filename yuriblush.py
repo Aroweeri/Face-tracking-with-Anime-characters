@@ -10,6 +10,9 @@ black = (255,255,255)
 ix = 960
 iy = 960
 
+scl=1600
+scb=900
+
 ge = pygame.image.load('Yuri cute.png')
 eye = pygame.image.load('Yuriceyes.png')
 kb = pygame.image.load('Yuri blush.png')
@@ -59,8 +62,6 @@ def show_yuri_image(w, h):
     return gameDisplay
     
 
-user32 = ctypes.windll.user32
-scl,scb = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
 print("Width: ",scl,"Height: ",scb) #screen metrics
 
 camera =  cv2.VideoCapture(0)

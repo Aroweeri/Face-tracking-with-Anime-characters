@@ -10,6 +10,7 @@ Requirements:
 Now get the file "YURI FULLSCREEN.py" from this repository on your computer.
 save the yuri2.bmp and eyes images and give the path for these images in the code (you can also use your own waifus if you want)
 download haarcascade and give its location in the code.
+Edit yuriblush.py or "YURI FULLSCREEN.py" and change the screen resolution (in pixels) in the variables scl (width) and scb (height).
 Run the code and have fun with your waifu ... weeb
 
 Make your own:

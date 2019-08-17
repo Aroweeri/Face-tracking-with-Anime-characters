@@ -10,8 +10,11 @@ black = (0,0,0)
 ix = 1920
 iy = 1080
 
-ge = pygame.image.load('mwo.png')
-eye = pygame.image.load('meye.png')
+scl=1600
+scb=900
+
+ge = pygame.image.load('yuri2.bmp')
+eye = pygame.image.load('eyes.png')
 def pos(gameDisplay,ge,x,y):
     gameDisplay.blit(ge,(x,y))
 
@@ -53,8 +56,6 @@ def show_yuri_image(w, h):
     return gameDisplay
     
 
-user32 = ctypes.windll.user32
-scl,scb = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
 print("Width: ",scl,"Height: ",scb) #screen metrics
 
 camera =  cv2.VideoCapture(0)
