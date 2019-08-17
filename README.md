@@ -6,6 +6,7 @@ Hello! I have made a Python project where YURI from the game doki doki literatur
 Requirements:
   Have python3 installed. (I have used Python3.6 on python IDLE )
   install OpenCV, os, math, ctypes, time, pygame (you will probably only need to download OpenCV and Pygame)
+  sudo pip install pygame opencv-python
   
 Now get the file "YURI FULLSCREEN.py" from this repository on your computer.
 save the yuri2.bmp and eyes images and give the path for these images in the code (you can also use your own waifus if you want)
