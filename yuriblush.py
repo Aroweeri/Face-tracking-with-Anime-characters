@@ -10,9 +10,9 @@ black = (255,255,255)
 ix = 960
 iy = 960
 
-ge = pygame.image.load('F:\Machine Learning\Yuri cute.png')
-eye = pygame.image.load('F:\Machine Learning\Yuriceyes.png')
-kb = pygame.image.load('F:\Machine Learning\Yuri blush.png')
+ge = pygame.image.load('Yuri cute.png')
+eye = pygame.image.load('Yuriceyes.png')
+kb = pygame.image.load('Yuri blush.png')
 def pos(gameDisplay,ge,x,y):
     gameDisplay.blit(ge,(x,y))
 
@@ -67,7 +67,7 @@ camera =  cv2.VideoCapture(0)
 
 w = camera.set(3, scl/2)
 h = camera.set(4, scb/2)
-face = cv2.CascadeClassifier("F:\Machine Learning\haarcascade_frontalface_alt2.xml")
+face = cv2.CascadeClassifier("haarcascade_frontalface_alt2.xml")
 fps = camera.get(cv2.CAP_PROP_FPS)
 print("fps: ",fps)
 settings = {

@@ -10,8 +10,8 @@ black = (0,0,0)
 ix = 1920
 iy = 1080
 
-ge = pygame.image.load('F:\Machine Learning\mwo.png')
-eye = pygame.image.load('F:\Machine Learning\meye.png')
+ge = pygame.image.load('mwo.png')
+eye = pygame.image.load('meye.png')
 def pos(gameDisplay,ge,x,y):
     gameDisplay.blit(ge,(x,y))
 
@@ -61,7 +61,7 @@ camera =  cv2.VideoCapture(0)
 
 w = camera.set(3, scl/2)
 h = camera.set(4, scb/2)
-face = cv2.CascadeClassifier("F:\Machine Learning\haarcascade_frontalface_alt2.xml")
+face = cv2.CascadeClassifier("haarcascade_frontalface_alt2.xml")
 fps = camera.get(cv2.CAP_PROP_FPS)
 print("fps: ",fps)
 settings = {
