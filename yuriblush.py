@@ -139,7 +139,7 @@ def main():
 			xcord = (x+w)/2
 			ycord = 2*(y+h)/3 # to look at the eyes
 			# put in else move_eyes(gameDisplay, xcord, ycord,)
-			if blushflag and (x+w >400 and y+h >400):
+			if blushflag and (x+w >350 and y+h >350):
 				print("too close")
 				blush(gameDisplay,kb)
 			else:
