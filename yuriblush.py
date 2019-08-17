@@ -83,6 +83,18 @@ def main():
 	global eye
 	global kb
 
+	blushflag=True        #If set, yuri will switch to blush mode when the user is too close.
+
+	#parse command line args
+	for arg in os.sys.argv:
+		if(arg == os.sys.argv[0]):
+			continue
+		if(arg == "--no-blush"):
+			blushflag=False
+		else:
+			print("Unrecognized command line arg " + arg)
+			return 1
+
 	pygame.init()
 	ge = pygame.image.load('Yuri cute.png')
 	eye = pygame.image.load('Yuriceyes.png')
@@ -127,7 +139,7 @@ def main():
 			xcord = (x+w)/2
 			ycord = 2*(y+h)/3 # to look at the eyes
 			# put in else move_eyes(gameDisplay, xcord, ycord,)
-			if x+w >400 and y+h >400:
+			if blushflag and (x+w >400 and y+h >400):
 				print("too close")
 				blush(gameDisplay,kb)
 			else:
