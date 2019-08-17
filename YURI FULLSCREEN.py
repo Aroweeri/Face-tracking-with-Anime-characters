@@ -13,7 +13,7 @@ iy = 1080
 scl=1600
 scb=900
 
-ge = pygame.image.load('yuri2.bmp')
+ge = pygame.image.load('yuri2.png')
 eye = pygame.image.load('eyes.png')
 def pos(gameDisplay,ge,x,y):
     gameDisplay.blit(ge,(x,y))
