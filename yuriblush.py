@@ -117,8 +117,9 @@ def main():
 
 	gameDisplay = show_yuri_image(scl, scb)
 	running = True
+	clock = pygame.time.Clock()
 	while running:
-		event = pygame.event.wait ()
+		clock.tick(15)
 		pressed = pygame.key.get_pressed()
 		if(pressed[pygame.K_q]):
 			running = False
@@ -147,6 +148,8 @@ def main():
 		#cv2.imshow('facedetect', img)
 		if cv2.waitKey(5) != -1:
 			break
+
+		pygame.event.pump()
 
 	cv2.destroyWindow("facedetect")
 	pygame.quit()
