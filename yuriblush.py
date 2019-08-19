@@ -14,9 +14,13 @@ ge = None
 eye = None
 kb = None 
 
+usage=""" python yuriblush.py <options>
+          --blush-file <filename>    : file of image to show when blushing
+          --eyes-file <filename>    : file of image for eyes
+          --yuri-file <filename>    : file of image to show normally """
+
 def pos(gameDisplay,ge,x,y):
 	gameDisplay.blit(ge,(x,y))
-
 def blush(gameDisplay,kb):
 	x = (scl-ix)/2
 	y = scb-iy
@@ -84,21 +88,41 @@ def main():
 	global kb
 
 	blushflag=True        #If set, yuri will switch to blush mode when the user is too close.
+	yurifile='Yuri cute.png'
+	eyesfile='Yuriceyes.png'
+	blushfile='Yuri blush.png'
+
+	numargs=len(os.sys.argv)
+	i=1
 
 	#parse command line args
-	for arg in os.sys.argv:
+	while i < numargs:
+		arg=os.sys.argv[i]
 		if(arg == os.sys.argv[0]):
 			continue
 		if(arg == "--no-blush"):
 			blushflag=False
+		elif(arg == "--yuri-file" and i < numargs):
+			yurifile=os.sys.argv[i+1]
+			i+=1
+		elif(arg == "--eyes-file" and i < numargs):
+			eyesfile=os.sys.argv[i+1]
+			i+=1
+		elif(arg == "--blush-file" and i < numargs):
+			blushfile=os.sys.argv[i+1]
+			i+=1
+		elif(arg == "-h"):
+			print(usage)
+			return 0
 		else:
 			print("Unrecognized command line arg " + arg)
 			return 1
+		i+=1
 
 	pygame.init()
-	ge = pygame.image.load('Yuri cute.png')
-	eye = pygame.image.load('Yuriceyes.png')
-	kb = pygame.image.load('Yuri blush.png')
+	ge = pygame.image.load(yurifile)
+	eye = pygame.image.load(eyesfile)
+	kb = pygame.image.load(blushfile)
 
 	print("Width: ",scl,"Height: ",scb) #screen metrics
 
